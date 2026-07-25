@@ -18,6 +18,7 @@ services:
       - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
+<<<<<<< HEAD
     ports:
       - "5432:5432"
 
@@ -36,3 +37,8 @@ services:
 volumes:
   postgres_data:
   pgadmin_data:
+=======
+
+volumes:
+  postgres_data:
+>>>>>>> 4f910760aaacd5db12c50f2ac18271545a8054ac
