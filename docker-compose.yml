@@ -18,6 +18,21 @@ services:
       - .env
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  pgadmin:
+    image: dpage/pgadmin4
+    ports:
+      - "5050:80"
+    depends_on:  
+      - db
+    environment:
+      PGADMIN_DEFAULT_EMAIL: befeddes@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: 123Sparkles1!
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
 
 volumes:
   postgres_data:
+  pgadmin_data:
